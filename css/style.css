@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin:400,600,700&display=swap");
+html {
+  box-sizing: border-box; }
+
+body {
+  font-size: 20px;
+  font-family: "Libre Franklin", sans-serif;
+  display: grid;
+  place-items: center; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: minmax(300px, 375px);
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas: "main main main" "sub sub sub" "notify notify notify" "pic pic pic" "footer footer footer"; }
+
+main {
+  grid-area: main; }
+  main .logo {
+    display: grid; }
+    main .logo img {
+      margin-left: auto;
+      margin-right: auto; }
+
+header {
+  text-align: center;
+  font-size: .8rem; }
+  header h1 {
+    color: #969696;
+    font-weight: 200; }
+    header h1 span {
+      color: #151f29;
+      font-weight: 600; }
+  header::after {
+    content: "Subscribe and get notified";
+    color: #151f29;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1.2rem; }
+
+.sub {
+  grid-area: sub;
+  padding-bottom: 1.5rem; }
+  .sub input {
+    padding: 0.7rem 1rem;
+    border: 1px solid #c2d3ff;
+    width: 90%;
+    border-radius: 1.1rem;
+    outline: none;
+    margin-left: 1rem;
+    position: relative; }
+    .sub input:hover {
+      border: 1px solid #4f7df3; }
+  .sub .invalid {
+    color: #ff5263;
+    position: relative;
+    font-size: 0.7rem;
+    text-align: center;
+    margin-top: .1rem; }
+
+.notify {
+  grid-area: notify;
+  padding-bottom: 1.8rem; }
+  .notify button {
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    width: 90%;
+    border-radius: 1.1rem;
+    outline: none;
+    border: none;
+    background: #4f7df3;
+    color: #fff;
+    margin-left: 1.5rem; }
+    .notify button:hover {
+      cursor: pointer;
+      background: #7799ee; }
+    .notify button:active {
+      cursor: pointer;
+      border: 2px solid #4f7df3;
+      color: #4f7df3;
+      background: #fff; }
+
+.pic {
+  grid-area: pic; }
+  .pic .dashboard {
+    width: 100%;
+    height: 100%; }
+
+footer {
+  grid-area: footer;
+  display: grid; }
+  footer .icons {
+    margin: 2rem auto 1rem;
+    display: flex; }
+    footer .icons i {
+      border: 0.5px solid #4f7df3;
+      padding: .3rem;
+      border-radius: 50%;
+      color: #4f7df3; }
+      footer .icons i:nth-child(2) {
+        margin-left: 1.2rem;
+        margin-right: 1.2rem; }
+      footer .icons i:nth-child(1) {
+        padding-right: .5rem;
+        padding-left: .5rem; }
+      footer .icons i:hover {
+        background: #4f7df3;
+        color: #fff;
+        cursor: pointer; }
+  footer p {
+    font-size: 0.5rem;
+    text-align: center; }
+
+.attribution {
+  font-size: 0.6rem;
+  text-align: center; }
+  .attribution a {
+    color: #3e52a3;
+    font-size: .7rem;
+    font-weight: 700;
+    text-decoration: none; }
+    .attribution a:hover {
+      color: #ff5263; }
+
+@media only screen and (min-width: 500px) {
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 10rem 10rem 10rem;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "main main main" "sub sub notify" "pic pic pic" "footer footer footer"; }
+  main {
+    grid-area: main; }
+  .sub {
+    grid-area: sub;
+    padding-bottom: 1.8rem; }
+    .sub input {
+      padding: 0.7rem 1rem;
+      width: 100%;
+      border-radius: 1.1rem;
+      margin-right: 0.5rem;
+      margin-left: 1rem;
+      position: relative; }
+    .sub .invalid {
+      color: #ff5263;
+      position: relative;
+      width: 60%;
+      margin-left: 1.9rem;
+      display: none;
+      font-size: 0.7rem;
+      margin-top: .1rem; }
+  .notify {
+    grid-area: notify;
+    padding-bottom: 1.8rem; }
+    .notify button {
+      padding-top: .8rem;
+      padding-bottom: .8rem;
+      width: 78%;
+      border-radius: 1.1rem;
+      margin-left: 1.5rem; } }
