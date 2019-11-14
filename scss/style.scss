@@ -81,6 +81,7 @@ header {
 	.invalid {
 		color: $secondaryRed;
 		position: relative;
+		display: none;
 		font-size: 0.7rem;
 		text-align: center;
 		margin-top: .1rem;
